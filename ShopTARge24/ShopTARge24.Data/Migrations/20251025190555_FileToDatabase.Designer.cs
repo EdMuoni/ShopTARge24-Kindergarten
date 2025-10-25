@@ -12,8 +12,8 @@ using ShopTARge24.Data;
 namespace ShopTARge24.Data.Migrations
 {
     [DbContext(typeof(ShopTARge24Context))]
-    [Migration("20251019200211_Kindergartens")]
-    partial class Kindergartens
+    [Migration("20251025190555_FileToDatabase")]
+    partial class FileToDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,9 @@ namespace ShopTARge24.Data.Migrations
 
                     b.Property<string>("ImageTitle")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("KindergartenId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("RealEstateId")
                         .HasColumnType("uniqueidentifier");
