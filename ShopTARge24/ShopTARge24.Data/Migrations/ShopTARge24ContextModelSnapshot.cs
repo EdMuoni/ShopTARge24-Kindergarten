@@ -39,30 +39,30 @@ namespace ShopTARge24.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FileToApis");
+                    b.ToTable("FileToApis", (string)null);
                 });
 
-            modelBuilder.Entity("ShopTARge24.Core.Domain.FileToDatabase", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            //modelBuilder.Entity("ShopTARge24.Core.Domain.FileToDatabase", b =>
+            //    {
+            //        b.Property<Guid>("Id")
+            //            .ValueGeneratedOnAdd()
+            //            .HasColumnType("uniqueidentifier");
 
-                    b.Property<byte[]>("ImageData")
-                        .HasColumnType("varbinary(max)");
+            //        b.Property<byte[]>("ImageData")
+            //            .HasColumnType("varbinary(max)");
 
-                    b.Property<string>("ImageTitle")
-                        .HasColumnType("nvarchar(max)");
+            //        b.Property<string>("ImageTitle")
+            //            .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("RealEstateId")
-                        .HasColumnType("uniqueidentifier");
+            //        b.Property<Guid?>("RealEstateId")
+            //            .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+            //        b.HasKey("Id");
 
-                    b.HasIndex("RealEstateId");
+            //        b.HasIndex("RealEstateId");
 
-                    b.ToTable("FileToDatabases");
-                });
+            //        b.ToTable("FileToDatabases", (string)null);
+            //    });
 
             modelBuilder.Entity("ShopTARge24.Core.Domain.Kindergartens", b =>
                 {
@@ -90,7 +90,7 @@ namespace ShopTARge24.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Kindergartens");
+                    b.ToTable("Kindergartens", (string)null);
                 });
 
             modelBuilder.Entity("ShopTARge24.Core.Domain.RealEstate", b =>
@@ -119,7 +119,7 @@ namespace ShopTARge24.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RealEstates");
+                    b.ToTable("RealEstates", (string)null);
                 });
 
             modelBuilder.Entity("ShopTARge24.Core.Domain.Spaceships", b =>
@@ -151,15 +151,15 @@ namespace ShopTARge24.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Spaceships");
+                    b.ToTable("Spaceships", (string)null);
                 });
 
-            modelBuilder.Entity("ShopTARge24.Core.Domain.FileToDatabase", b =>
-                {
-                    b.HasOne("ShopTARge24.Core.Domain.RealEstate", null)
-                        .WithMany("Files")
-                        .HasForeignKey("RealEstateId");
-                });
+            //modelBuilder.Entity("ShopTARge24.Core.Domain.FileToDatabase", b =>
+            //    {
+            //        b.HasOne("ShopTARge24.Core.Domain.RealEstate", null)
+            //            .WithMany("Files")
+            //            .HasForeignKey("RealEstateId");
+            //    });
 
             modelBuilder.Entity("ShopTARge24.Core.Domain.RealEstate", b =>
                 {
